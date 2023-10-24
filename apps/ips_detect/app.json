@@ -1,0 +1,28 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "批量ip探测",
+  "version": "0.1",
+  "description": "批量ip探测",
+  "type": "基础应用",
+  "action": [
+    {
+      "name": "批量ip探测",
+      "func": "ip_detect"
+    }
+  ],
+  "args": {
+    "ip_detect": [
+      {
+        "key": "ips",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "ports",
+        "type": "text",
+        "required": false
+      }
+    ]
+  }
+}

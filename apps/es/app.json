@@ -9,6 +9,10 @@
     {
       "name": "查询数据",
       "func": "scan"
+    },
+    {
+      "name": "插入数据",
+      "func": "insert"
     }
   ],
   "args": {
@@ -20,9 +24,40 @@
       },
       {
         "key": "port",
-        "type": "number",
-        "required": true,
-        "default": 9200
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "index",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "body",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "key": "account",
+        "type": "text",
+        "required": false
+      },
+      {
+        "key": "password",
+        "type": "text",
+        "required": false
+      }
+    ],
+    "insert": [
+      {
+        "key": "host",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "port",
+        "type": "text",
+        "required": true
       },
       {
         "key": "index",
