@@ -74,5 +74,5 @@ def run_from_python(ips,ports):
 
 
 if __name__ == "__main__":
-    print(execute_remote_command("whoami"))
+    pass
 
