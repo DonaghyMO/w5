@@ -5,7 +5,7 @@ import nmap
 import subprocess
 import socket
 import subprocess
-
+from scan_and_attack.ssh_clients import *
 
 async def ip_detect(ips, ports):
     # logger.info("[批量ip探测] APP 执行参数为: ip地址:{ips} 探测端口:{ports}", ips=ips,ports=ports)
@@ -77,25 +77,5 @@ def run_from_python(ips,ports):
 
 
 if __name__ == "__main__":
-    import asyncio
+    print(execute_remote_command("whoami"))
 
-    loop = asyncio.get_event_loop()
-    result = loop.run_until_complete(ip_detect("baidu.com", ""))
-    print(result)
-    # import nmap
-    #
-    # # 创建 Nmap 扫描器对象
-    # nm = nmap.PortScanner()
-    #
-    # # 执行扫描
-    # nm.scan('baidu.com google.com', '22,80,8080,3306')
-    # print("================================")
-    # print(nm.command_line())
-    # print("================================")
-    # print(nm.scaninfo())
-    # print("================================")
-    # print(nm.all_hosts())
-    # print("================================")
-    # for i in nm.all_hosts():
-    #     print(nm[i])
-    #     print("================================")
