@@ -47,12 +47,12 @@ def execute_remote_command(command):
         error = stderr.read().decode()
 
         if output:
-            print(f"Command output: {output}")
+            return f"Command output: {output}"
         if error:
-            print(f"Command error: {error}")
+            return f"Command error: {error}"
 
     except Exception as e:
-        print(f"An error occurred: {str(e)}")
+        return f"An error occurred: {str(e)}"
 
     finally:
         # 关闭 SSH 连接
