@@ -1,11 +1,8 @@
 # from loguru import logger
 import json
-import re
 import nmap
 import subprocess
-import socket
-import subprocess
-from scan_and_attack.ssh_clients import *
+
 
 async def ip_detect(ips, ports):
     # logger.info("[批量ip探测] APP 执行参数为: ip地址:{ips} 探测端口:{ports}", ips=ips,ports=ports)
