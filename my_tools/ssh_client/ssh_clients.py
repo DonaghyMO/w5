@@ -9,7 +9,7 @@ def get_login_info(config_name):
     :return:
     """
     cf = configparser.RawConfigParser()
-    cf.read("./config.ini")
+    cf.read("/w5/my_tools/ssh_client/config.ini")
     username = cf.get(config_name, "username")
     key_file = cf.get(config_name, "key_file")
     password = cf.get(config_name, "password")
