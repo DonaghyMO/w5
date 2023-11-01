@@ -20,7 +20,7 @@ python-nmap==0.6.1
 pytz==2020.4
 OTXv2==1.5.10
 jira==2.0.0
-paramiko==2.7.2
+paramiko==3.3.1
 pywinrm==0.4.1
 rpyc==5.3.0
 nest-asyncio==1.5.4
