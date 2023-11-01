@@ -23,6 +23,7 @@ services:
     volumes:
       - ./docker/config.ini:/w5/config.ini
       - ./docker/apps:/w5/apps
+      - ./docker/my_tools:/w5/my_tools
       - ./docker/logs:/opt
       - /etc/localtime:/etc/localtime
     networks:

@@ -38,5 +38,7 @@ async def execute(host, port, user, passwd, shell):
             return {"status": 2, "result": str(err.decode("utf-8"))}
 
 if __name__ == "__main__":
-    from core.scan_and_attack.ssh_clients import *
-    execute_remote_command("whoami")
+    from ssh_client.ssh_clients import *
+    print(execute_remote_command("whoami"))
+
+
