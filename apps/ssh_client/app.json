@@ -1,0 +1,28 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "ssh客户端",
+  "version": "0.1",
+  "description": "Linux SSH 客户端，执行远程命令",
+  "type": "命令执行",
+  "action": [
+    {
+      "name": "通过ssh客户端执行命令",
+      "func": "execute"
+    }
+  ],
+  "args": {
+    "execute": [
+      {
+        "key": "host",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "command",
+        "type": "textarea",
+        "required": true
+      }
+    ]
+  }
+}

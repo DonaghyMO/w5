@@ -1,6 +1,6 @@
 import paramiko
 import configparser
-
+import os
 
 def get_login_info(config_name):
     """
@@ -9,7 +9,9 @@ def get_login_info(config_name):
     :return:
     """
     cf = configparser.RawConfigParser()
-    cf.read("/w5/my_tools/ssh_client/config.ini")
+    current_path = os.path.abspath(os.path.dirname(__file__))
+    os.chdir(current_path)
+    cf.read("config.ini")
     username = cf.get(config_name, "username")
     key_file = cf.get(config_name, "key_file")
     password = cf.get(config_name, "password")
@@ -19,9 +21,9 @@ def get_login_info(config_name):
     return username, password, key_file, host, port
 
 
-def execute_remote_command(command):
+def execute_remote_command(command,host):
     # 获取配置
-    username, password, key_filename, server, port = get_login_info("119.91.228.150")
+    username, password, key_filename, server, port = get_login_info(host)
     port = int(port) if port else 22
 
     # 创建 SSH 客户端
@@ -61,4 +63,4 @@ def execute_remote_command(command):
 
 if __name__ == '__main__':
     # 用法示例
-    execute_remote_command("whoami")
+    print(execute_remote_command("who"))
