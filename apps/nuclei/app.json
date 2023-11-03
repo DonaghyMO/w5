@@ -1,0 +1,28 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "ssh客户端",
+  "version": "0.1",
+  "description": "通过ssh执行nuclei命令",
+  "type": "命令执行",
+  "action": [
+    {
+      "name": "nuclei",
+      "func": "execute"
+    }
+  ],
+  "args": {
+    "execute": [
+      {
+        "key": "host",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "command",
+        "type": "textarea",
+        "required": true
+      }
+    ]
+  }
+}
