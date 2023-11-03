@@ -1,7 +1,7 @@
 {
   "identification": "w5soar",
   "is_public": true,
-  "name": "ssh客户端",
+  "name": "nuclei",
   "version": "0.1",
   "description": "通过ssh执行nuclei命令",
   "type": "命令执行",
